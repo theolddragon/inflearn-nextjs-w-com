@@ -4,6 +4,8 @@ import styles from './layout.module.css'
 import Link from "next/link";
 import Image from 'next/image'
 import ZLogo from '/public/zlogo.png'
+import NavMenu from './_component/NavMenu';
+import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
 
 const AfterLoginLayout = async ({children}: {
     children: React.ReactNode
@@ -18,6 +20,13 @@ const AfterLoginLayout = async ({children}: {
                                 <Image src={ZLogo} alt="z.com 로고" width={40} height={40} />
                             </div>
                         </Link>
+                        <nav>
+                            <ul>
+                                <NavMenu />
+                            </ul>
+                            <Link href="/compose/tweet" className={styles.postButton}>게시하기</Link>
+                        </nav>
+                        <LogoutButton />
                     </div>
                 </section>
             </header>
