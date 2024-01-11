@@ -1,4 +1,4 @@
-import React from 'react';
+import {ReactNode} from 'react';
 
 import styles from './layout.module.css'
 import Link from "next/link";
@@ -9,9 +9,11 @@ import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
 import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
 import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
 
-const AfterLoginLayout = async ({children}: {
-    children: React.ReactNode
-}) => {
+type Props = {
+    children: ReactNode,
+    modal: ReactNode,
+};
+const AfterLoginLayout = async ({children, modal}: Props) => {
     return (
         <div className={styles.container}>
             <header className={styles.leftSectionWrapper}>
@@ -57,6 +59,7 @@ const AfterLoginLayout = async ({children}: {
                     </section>
                 </div>
             </div>
+            {modal}
         </div>
     );
 };
