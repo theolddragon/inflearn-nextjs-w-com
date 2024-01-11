@@ -1,15 +1,18 @@
-import styles from './post.module.css'
-import Link from "next/link"
-import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons"
 import dayjs from 'dayjs'
 import 'dayjs/locale/ko'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import PostArticle from "@/app/(afterLogin)/_component/PostArticle";
+import styles from "@/app/(afterLogin)/_component/post.module.css";
+import Link from "next/link";
+import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons";
+import React from "react";
 
 dayjs.locale('ko');
 dayjs.extend(relativeTime)
 
 const Post = () => {
     const target = {
+        postId: 1,
         User: {
             id: 'elonmusk',
             nickname: 'Elon Musk',
@@ -21,7 +24,7 @@ const Post = () => {
     }
 
     return (
-        <article className={styles.post}>
+        <PostArticle post={target}>
             <div className={styles.postWrapper}>
                 <div className={styles.postUserSection}>
                     <Link href={`/${target.User.id}`} className={styles.postUserImage}>
@@ -45,10 +48,10 @@ const Post = () => {
                     <div className={styles.postImageSection}>
 
                     </div>
-                    <ActionButtons />
+                    <ActionButtons/>
                 </div>
             </div>
-        </article>
+        </PostArticle>
     );
 };
 
