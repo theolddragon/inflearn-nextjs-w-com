@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Projects/thunder-order-administrator-web/.idea/thunder-order-administrator-web.iml" filepath="$USER_HOME$/Projects/thunder-order-administrator-web/.idea/thunder-order-administrator-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/w-com.iml" filepath="$PROJECT_DIR$/.idea/w-com.iml" />
     </modules>
   </component>
