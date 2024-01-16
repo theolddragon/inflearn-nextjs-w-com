@@ -11,6 +11,9 @@ dependencies:
   '@faker-js/faker':
     specifier: ^8.3.1
     version: 8.3.1
+  '@tanstack/query-core':
+    specifier: ^5.17.10
+    version: 5.17.10
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
@@ -374,7 +377,6 @@ packages:
 
   /@tanstack/query-core@5.17.10:
     resolution: {integrity: sha512-bJ2oQUDBftvHcEkLS3gyzzShSeZpJyzNNRu8oHK13iNdsofyaDXtNO/c1Zy/PZYVX+PhqOXwoT42gMiEMRSSfQ==}
-    dev: true
 
   /@tanstack/query-devtools@5.17.7:
     resolution: {integrity: sha512-TfgvOqza5K7Sk6slxqkRIvXlEJoUoPSsGGwpuYSrpqgSwLSSvPPpZhq7hv7hcY5IvRoTNGoq6+MT01C/jILqoQ==}

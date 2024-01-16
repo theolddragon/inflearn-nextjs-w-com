@@ -1,16 +1,16 @@
-import {ReactNode} from 'react';
+import { ReactNode } from 'react'
 
 import styles from './layout.module.css'
-import Link from "next/link";
+import Link from 'next/link'
 import Image from 'next/image'
 import ZLogo from '/public/zlogo.png'
-import NavMenu from '@/app/(afterLogin)/_component/NavMenu';
-import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
-import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
-import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
-import RightSearchZone from "@/app/(afterLogin)/_component/RightSearchZone";
+import NavMenu from '@/app/(afterLogin)/_component/NavMenu'
+import LogoutButton from '@/app/(afterLogin)/_component/LogoutButton'
+import TrendSection from '@/app/(afterLogin)/_component/TrendSection'
+import RightSearchZone from '@/app/(afterLogin)/_component/RightSearchZone'
 import { auth } from '@/auth'
 import RQProvider from '@/app/(afterLogin)/_component/RQProvider'
+import FollowRecommendSection from '@/app/(afterLogin)/_component/FollowRecommendSection'
 
 type Props = {
     children: ReactNode,
@@ -61,9 +61,7 @@ const AfterLoginLayout = async ({children, modal}: Props) => {
                             <TrendSection />
                             <div className={styles.followRecommend}>
                                 <h3>팔로우 추천</h3>
-                                <FollowRecommend />
-                                <FollowRecommend />
-                                <FollowRecommend />
+                                <FollowRecommendSection />
                             </div>
                         </section>
                     </div>
