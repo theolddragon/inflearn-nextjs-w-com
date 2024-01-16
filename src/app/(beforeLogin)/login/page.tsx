@@ -2,9 +2,15 @@
 
 import {useRouter} from "next/navigation";
 import Main from "@/app/(beforeLogin)/_component/Main";
+import { useSession } from 'next-auth/react'
 
 const Login = () => {
-    let router = useRouter();
+    const router = useRouter();
+    const { data: session } = useSession();
+    if (session?.user) {
+        router.replace("/home")
+    }
+
     router.replace('/i/flow/login')
     return (
         <Main />

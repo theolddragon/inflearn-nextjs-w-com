@@ -1,5 +1,7 @@
-import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials";
+import NextAuth from 'next-auth'
+import CredentialsProvider from 'next-auth/providers/credentials'
+
+export const LOGIN_PAGE_PATH = '/i/flow/login'
 
 export const {
     handlers: { GET, POST },
@@ -7,7 +9,7 @@ export const {
     signIn,
 } = NextAuth({
     pages: {
-        signIn: '/i/flow/login',
+        signIn: LOGIN_PAGE_PATH,
         newUser: '/i/flow/signup',
     },
     providers: [
